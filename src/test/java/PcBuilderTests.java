@@ -1,5 +1,8 @@
 import StepObject.PcBuilderSteps;
 import Utils.ChromeRunner;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 import static DataObject.PcBuilderData.ryzen_processor;
@@ -10,6 +13,8 @@ import static org.testng.Assert.*;
 public class PcBuilderTests extends ChromeRunner {
     PcBuilderSteps pcbuildersteps = new PcBuilderSteps();
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("checking PC builder section")
     public void Pcbuilder(){
         pcbuildersteps.enter_builder()
                 .cpu_click()

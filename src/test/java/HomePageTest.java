@@ -2,6 +2,9 @@ import StepObject.HomePageSteps;
 import Utils.ChromeRunner;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.selector.ByText;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,6 +16,8 @@ import static org.testng.Assert.*;
 public class HomePageTest extends ChromeRunner {
     HomePageSteps homepagesteps = new HomePageSteps();
 @Test
+@Severity(SeverityLevel.CRITICAL)
+@Description("checking login")
 
     public void login () {
     homepagesteps.changecolour();
@@ -25,6 +30,8 @@ public class HomePageTest extends ChromeRunner {
             .press_login_button();
     }
   @Test
+  @Severity(SeverityLevel.NORMAL)
+  @Description("checking location choosing and appdownload link")
     public void location_and_link (){
       homepagesteps.changecolour()
               .location_click()
@@ -37,6 +44,8 @@ public class HomePageTest extends ChromeRunner {
       assertTrue(homepagesteps.success_msg.is(Condition.visible));
      }
      @Test
+     @Severity(SeverityLevel.NORMAL)
+     @Description("searching and adding item to cart")
      public void search_and_add (){
     homepagesteps.search_product(search_lenovo);
     homepagesteps.press_lenovo();

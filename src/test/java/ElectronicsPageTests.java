@@ -1,6 +1,9 @@
 import StepObject.ElectronicsSteps;
 import StepObject.PcBuilderSteps;
 import Utils.ChromeRunner;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 import static DataObject.ElectronicsData.lg_g2_search;
@@ -12,6 +15,8 @@ public class ElectronicsPageTests extends ChromeRunner {
     HomePageTest login_element = new HomePageTest();
 
     @Test
+    @Severity(SeverityLevel.NORMAL)
+    @Description("checking electronics section")
     public void electronics_test (){
         login_element.login();
         electronicsSteps.click_electronics()
