@@ -23,10 +23,7 @@ public class HomePageSteps extends HomePage {
         return this;
     }
 
-    public HomePageSteps seealldeal(){
-        seealldealbtn.click();
-        return this;
-    }
+
     public HomePageSteps location_click(){
         location_icon.click();
         return this;
@@ -57,10 +54,7 @@ public class HomePageSteps extends HomePage {
         sleep(3000);
         return this;
     }
-    public HomePageSteps scroll_to_success_msg(){
-        down_app_element.scrollTo();
-        return this;
-    }
+
     public HomePageSteps signing_in(){
         sign_in.click();
         return this;
@@ -75,6 +69,15 @@ public class HomePageSteps extends HomePage {
     }
     public HomePageSteps enter_password(String password){
         password_input.setValue(password);
+        return this;
+    }
+    public HomePageSteps press_lenovo(){
+        lenovo_laptop.click();
+        return this;
+    }
+    public HomePageSteps adding_to_cart(){
+        add_to_cart_icon.click();
+        sleep(3000);
         return this;
     }
 }

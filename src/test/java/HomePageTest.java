@@ -17,12 +17,12 @@ public class HomePageTest extends ChromeRunner {
     public void login () {
     homepagesteps.changecolour();
     assertEquals(homepagesteps.darkmode_func.getText(),mode_text,"colour changing functionality");
-    homepagesteps.signing_in();
-    homepagesteps.enter_email(email);
+    homepagesteps.signing_in()
+            .enter_email(email);
     assertEquals(homepagesteps.email_input_sign_in.getValue(),email);
-    homepagesteps.press_login_button();
-    homepagesteps.enter_password(password);
-    homepagesteps.press_login_button();
+    homepagesteps.press_login_button()
+            .enter_password(password)
+            .press_login_button();
     }
   @Test
     public void location_and_link (){
@@ -35,6 +35,14 @@ public class HomePageTest extends ChromeRunner {
               .enter_mob_number(mob_number)
               .press_send_link();
       assertTrue(homepagesteps.success_msg.is(Condition.visible));
+     }
+     @Test
+     public void search_and_add (){
+    homepagesteps.search_product(search_lenovo);
+    homepagesteps.press_lenovo();
+    homepagesteps.adding_to_cart();
+    assertTrue(homepagesteps.cart_check_text.is(Condition.visible));
+
      }
 
 }

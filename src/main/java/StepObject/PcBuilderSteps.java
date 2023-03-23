@@ -6,37 +6,36 @@ import static DataObject.PcBuilderData.*;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class PcBuilderSteps extends PcBuilerPage {
-    public PcBuilerPage enter_builder(){
+    public PcBuilderSteps enter_builder(){
         builder_element.click();
         return this;
     }
-    public PcBuilerPage cpu_click(){
+    public PcBuilderSteps cpu_click(){
         cpu_element.click();
         return this;
     }
-    public PcBuilerPage checker_click(){
+    public PcBuilderSteps checker_click(){
         comp_checker.click();
         return this;
     }
-    public PcBuilerPage arrow_right_click(){
+    public PcBuilderSteps arrow_right_click(){
         arrow_right.click();
         return this;
     }
-    public PcBuilerPage add_processor (String ryzen_processor){
-        builder_srch_input.setValue(ryzen_processor);
+    public PcBuilderSteps add_processor (String processor){
+        builder_srch_input.setValue(processor);
         return this;
     }
-    public PcBuilerPage select_processor (){
+    public PcBuilderSteps select_processor (){
         select_btn.click();
         return this;
     }
-    public PcBuilerPage item_remove(){
+    public PcBuilderSteps item_remove(){
         item_remove_inp.click();
         return this;
     }
-    public PcBuilerPage click_outside(){
+    public PcBuilderSteps click_outside(){
         click_.click();
-        sleep(7000);
         return this;
     }
 

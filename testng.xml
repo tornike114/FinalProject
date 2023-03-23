@@ -1,13 +1,23 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Automation Suite" verbose="1" thread-count="2" parallel="tests">
-    <test name="Registration" parallel="tests">
+<suite name="Automation Suite" verbose="1" thread-count="1" parallel="tests">
+    <test name="firstest" parallel="tests">
         <classes>
-            <class name="elitelectronics"/>
+            <class name="HomePageTest"/>
         </classes>
     </test>
-    <test name="basket" parallel="tests">
+    <test name="secondtest" parallel="tests">
         <classes>
-            <class name="basket"/>
+            <class name="ElectronicsPageTests"/>
+        </classes>
+    </test>
+    <test name="thirdtest" parallel="tests">
+        <classes>
+            <class name="PcBuilderTests"/>
+        </classes>
+    </test>
+    <test name="fourthtest" parallel="tests">
+        <classes>
+            <class name="SignUpTests"/>
         </classes>
     </test>
 </suite>
